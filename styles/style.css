@@ -1,1 +1,416 @@
-/* место для вашего кода */
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    align-items: center;
+    padding: 0px 50px;
+    max-width: 1100px;
+    height: 293px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.site-nav {
+    justify-self: start;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-item:not(:first-child)::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.nav-link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.nav-item:first-child .nav-link {
+  text-decoration: none;
+}
+
+div.site-logo {
+    justify-self: center;
+}
+
+img.site-logo {
+    height: 105px;
+    display: block;
+    width: 148px;
+    object-fit: contain;
+}
+
+.contacts {
+    justify-self: end;
+    font-style: normal;
+    width: 240px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    list-style: none;
+}
+
+.contact-item {
+    line-height: 1.3;
+}
+
+.contact-link {
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.email-link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.contact-link:hover {
+    opacity: 0.6;
+}
+
+.address-text {
+    display: inline-block;
+    color: #000;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/cover.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 757px;
+    padding: 165px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 385px;
+    width: 100%;
+}
+
+.hero-word {
+    display: block;
+    font-size: 96px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1;
+}
+
+.word-1 {
+    align-self: flex-start;
+}
+
+.word-2 {
+    align-self: center;
+}
+
+.word-3 {
+    align-self: flex-end;
+}
+
+.hero-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 51px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-spacing: 1em;
+    max-width: 70%;
+    line-height: 1.2;
+}
+
+.hero-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.lots {
+    width: 1052px;
+    margin: 80px auto 0;
+}
+
+.lots-title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color:#000;
+    margin-bottom: 74px;
+    padding-left: 40px;
+}
+
+.lots-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.lots-card {
+    width: 100%;
+    height: 596px;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.card-1 {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/card-lot-01.jpg');
+}
+
+.card-2 {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/card-lot-02.jpg');
+}
+
+.card-3 {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../images/card-lot-03.jpg');
+}
+
+.lots-card__title {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 3px;;
+    color:#fff;
+}
+
+.lots-card__text {
+    font-weight:400;
+    font-size: 20px;
+    line-height: 1.3;
+    color:#fff;
+}
+
+.lots-link {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-top: 30px;
+    padding-left: 40px;
+}
+
+.about {
+    width: 1052px;
+    margin: 80px auto;
+    padding-left: 47px;
+    box-sizing: border-box;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 240px 693px;
+    gap: 72px;
+    align-items: start;
+}
+
+.about-logo-circle {
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.about-logo-image {
+    width: 148px;
+    height: 114px;
+    object-fit: contain;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.about-title {
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-text {
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.footer {
+  width: 1100px;
+  height: 180px;
+  margin: 0 auto;
+  padding: 0 50px; 
+  box-sizing: border-box;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center; 
+  
+  /* Задаем базовый размер шрифта для всего подвала */
+  font-size: 14px; 
+}
+
+/* --- 1. Контакты --- */
+.contacts-footer {
+  justify-self: start; 
+  font-style: normal;
+  max-width: 265px; 
+  line-height: 1.3; /* Чуть плотнее строки */
+}
+
+.contacts-footer .contact-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contacts-footer .address-text {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* --- 2. Навигация --- */
+.site-nav-footer {
+  justify-self: center; 
+  text-align: center; 
+}
+
+.nav-list-footer {
+  display: flex;
+  flex-direction: column; 
+  /* Убираем gap, чтобы ссылки стояли максимально плотно, как в макете */
+  gap: 2px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link-footer {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 14px; 
+  line-height: 1.2; /* Жестко задаем высоту строки */
+  transition: opacity 0.2s ease;
+}
+
+.nav-link-footer:hover {
+  opacity: 0.6;
+}
+
+/* --- 3. Соцсети --- */
+.social {
+  justify-self: end; 
+  display: flex;
+  gap: 48px; 
+  width: 240px; 
+  justify-content: flex-end; 
+}
+
+/* Круглая обводка 48x48 */
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #000; 
+  border-radius: 50%; 
+  transition: opacity 0.2s ease;
+  box-sizing: border-box;
+}
+
+.social-link:hover {
+  opacity: 0.6;
+}
+
+/* Иконки внутри кругов */
+.social-logo {
+  /* Увеличиваем иконку, чтобы она не была слишком маленькой */
+  width: 24px; 
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
